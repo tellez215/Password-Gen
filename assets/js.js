@@ -42,8 +42,8 @@ if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
         lowerCase === false &&
         upperCase === false &&
         specialCharacters === false &&
-
-    ) {
+        numbers === false
+    ); {
         alert("Please select at least one character option!");
         generatePassword();
     }
