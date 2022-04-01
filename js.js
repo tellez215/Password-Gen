@@ -25,7 +25,11 @@ if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
     if (lowerCase) {
         allChar += lowercaseChar
     };
-    let upperCase = confirm("")
+    let upperCase = confirm("would you like to use uppercase characters?");
+    if (upperCase) {
+        allChar += uppercaseChar
+    };
+    let
 }
 
 
