@@ -43,12 +43,20 @@ if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
         upperCase === false &&
         specialCharacters === false &&
         numbers === false
-    ); {
-        alert("Please select at least one character option!");
-        generatePassword();
+    ) {
+        // alert("Please select at least one character option!");
+        // generatePassword();
     }
 
 }
+let pwd = "";
+for (i = 0; i < pwdLength; i++) {
+    pwd += allChar.charAt(Math.floor(Math.random() * allChar.length))
+}
+
+
+
+
 
 
 
