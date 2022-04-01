@@ -12,7 +12,20 @@ Hello! This project is called "Password-Gen" and I created this to generate stro
 
 <li> Types of Assigment Operators and their functions.
 
-<li> The purpose of using "else , if ."\
+<li> The purpose of using "else , if ."
+
+<br>
+
+## <em> Visuals
+![contact](./assets/pics/1st.png "First Question")
+<p> Webpage asking user for their first input.
+
+![contact](./assets/pics/2nd.png "Second Question")
+<p> Asking for their second input of lowercase.
+
+![contact](./assets/pics/3rd.png "Generated Password")
+<p> Final Product of users input requests.
+
 
 <br>
 
