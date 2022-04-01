@@ -29,7 +29,14 @@ if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
     if (upperCase) {
         allChar += uppercaseChar
     };
-    let
+    let specialCharacters = confirm("would you like to use specialcharacters?");
+    if (specialCharacters) {
+        allChar += specialChar
+    };
+    let numbers = confirm("would you like to use numbers?");
+    if (numbers) {
+        allChar += numChar
+    };
 }
 
 
