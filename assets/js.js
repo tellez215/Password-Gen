@@ -16,7 +16,7 @@ function writePassword() {
 
 }
 
-let pwdLength = prompt(
+var pwdLength = prompt(
     "How long would you like your password to be? between 8-128.");
 if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
     alert("Please enter a number between 8-128.");
@@ -37,6 +37,17 @@ if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
     if (numbers) {
         allChar += numChar
     };
+
+    if (
+        lowerCase === false &&
+        upperCase === false &&
+        specialCharacters === false &&
+
+    ) {
+        alert("Please select at least one character option!");
+        generatePassword();
+    }
+
 }
 
 
