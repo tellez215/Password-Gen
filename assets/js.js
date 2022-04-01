@@ -40,5 +40,6 @@ if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
 }
 
 
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
