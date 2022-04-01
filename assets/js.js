@@ -5,6 +5,7 @@ var numChar = "123456789";
 var specialChar = "!@#$%^&*()_+=-{{}[]:;";
 var allChar = "";
 
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -16,49 +17,54 @@ function writePassword() {
 
 }
 
-var pwdLength = prompt(
-    "How long would you like your password to be? between 8-128.");
-if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
-    alert("Please enter a number between 8-128.");
-} else {
-    let lowerCase = confirm("would you like to use lowercase characters?");
-    if (lowerCase) {
-        allChar += lowercaseChar
-    };
-    let upperCase = confirm("would you like to use uppercase characters?");
-    if (upperCase) {
-        allChar += uppercaseChar
-    };
-    let specialCharacters = confirm("would you like to use specialcharacters?");
-    if (specialCharacters) {
-        allChar += specialChar
-    };
-    let numbers = confirm("would you like to use numbers?");
-    if (numbers) {
-        allChar += numChar
-    };
+function generatePassword() {
 
-    if (
-        lowerCase === false &&
-        upperCase === false &&
-        specialCharacters === false &&
-        numbers === false
-    ) {
-        // alert("Please select at least one character option!");
-        // generatePassword();
+    var pwdLength = prompt(
+        "How long would you like your password to be? between 8-128."
+    );
+    if (pwdLength < 8 || pwdLength > 128 || isNaN(parseInt(pwdLength))) {
+        alert("Please enter a number between 8-128.");
+    } else {
+        let lowerCase = confirm("would you like to use lowercase characters?");
+        if (lowerCase) {
+            allChar += lowercaseChar
+        };
+        let upperCase = confirm("would you like to use uppercase characters?");
+        if (upperCase) {
+            allChar += uppercaseChar
+        };
+        let specialCharacters = confirm("would you like to use specialcharacters?");
+        if (specialCharacters) {
+            allChar += specialChar
+        };
+        let numbers = confirm("would you like to use numbers?");
+        if (numbers) {
+            allChar += numChar
+        };
+
+        if (
+            lowerCase === false &&
+            upperCase === false &&
+            specialCharacters === false &&
+            numbers === false
+        ) {
+            alert("Please select at least one character option!");
+            return;
+
+        };
+
+    };
+    let pwd = "";
+
+
+
+    for (let i = 0; i < pwdLength; i++) {
+        pwd += allChar[Math.floor(Math.random() * allChar.length)];
+
     }
+    return pwd;
 
-}
-let pwd = "";
-for (i = 0; i < pwdLength; i++) {
-    pwd += allChar.charAt(Math.floor(Math.random() * allChar.length))
-}
-
-
-
-
-
-
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
