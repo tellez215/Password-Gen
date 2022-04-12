@@ -57,7 +57,6 @@ function generatePassword() {
     let pwd = "";
 
 
-
     for (let i = 0; i < pwdLength; i++) {
         pwd += allChar[Math.floor(Math.random() * allChar.length)];
 
